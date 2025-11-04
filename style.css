@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "Monocraft";
+  src: url("fonts/Monocraft.ttf") format("truetype");
+}
+
+body {
+  font-family: "Monocraft", sans-serif;
+}
+
+
+
+.header{
+    text-align: center;
+    font-size: 50px;
+}
+
+.nav1,
+.nav2,
+.nav3,
+.nav4,
+.nav5 {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.nav1 a,
+.nav2 a,
+.nav3 a,
+.nav4 a,
+.nav5 a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.nav1 > .navItem1 a:hover{
+ color: green;
+}
+
+.nav1 > .navItem2 a:hover{
+ color: yellow;
+}
+
+.nav1 > .navItem3 a:hover{
+ color: red;
+}
+
+.nav1 > .navItem4 a:hover{
+ color: purple;
+}
+
+.nav2 > .navItem1 a:hover{
+ color: grey   
+}
+
+.nav2 > .navItem2 a:hover{
+ color: yellow   
+}
+
+.nav2 > .navItem3 a:hover{
+ color: red   
+}
+
+.nav2 > .navItem4 a:hover{
+ color: purple   
+}
+
+.nav3 > .navItem1 a:hover{
+ color: grey   
+}
+
+.nav3 > .navItem2 a:hover{
+ color: green   
+}
+
+.nav3 > .navItem3 a:hover{
+ color: red   
+}
+
+.nav3 > .navItem4 a:hover{
+ color: purple   
+}
+
+.nav4 > .navItem1 a:hover{
+ color: grey   
+}
+
+.nav4 > .navItem2 a:hover{
+ color: green   
+}
+
+.nav4 > .navItem3 a:hover{
+ color: yellow   
+}
+
+.nav4 > .navItem4 a:hover{
+ color: purple   
+}
+
+.nav5 > .navItem1 a:hover{
+ color: grey   
+}
+
+.nav5 > .navItem2 a:hover{
+ color: green   
+}
+
+.nav5 > .navItem3 a:hover{
+ color: yellow   
+}
+
+.nav5 > .navItem4 a:hover{
+ color: red   
+}
+
+.tiereHeader{
+  text-align: center;
+  font-size: 40px;
+  color: green;
+}
+
+.ovrwrldMobsHeader{
+  text-align: center;
+  font-size: 40px;
+  color: yellow;
+}
+
+.netherHeader{
+  text-align: center;
+  font-size: 40px;
+  color: red;
+}
+
+.endHeader{
+  text-align: center;
+  font-size: 40px;
+  color: purple;
+}
