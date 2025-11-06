@@ -1,2 +1,1 @@
-# Mob-Wiki
-Minecraft-Mob-Wiki
+# Entwicklung von Apps
