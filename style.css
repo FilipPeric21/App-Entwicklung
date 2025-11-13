@@ -3,7 +3,6 @@ body {
   background-image: url('images/background.png');
   background-size: cover;       
   background-position: center;   
-  background-repeat: no-repeat; 
   background-attachment: fixed; 
   color: white;
 }
@@ -14,14 +13,14 @@ body {
   position: fixed;
   top: 0; left: 0; width: 100%;
   z-index: 1000;
-  background-color: #0a2138;
   color: lightblue
 }
 
 .navigator {
   margin-top: 60px;
-  margin-bottom: 50px;
-  text-align: center; 
+  margin-bottom: 30px;
+  text-align: center;
+
 }
 
 .navigator div{
@@ -42,21 +41,78 @@ body {
 .navigator .item2 a:hover,
 .navigator .item3 a:hover,
 .navigator .item4 a:hover{
-    color: blue;
+    color: lightblue;
+  text-shadow: 
+    0 0 6px lightblue,
+    0 0 12px lightblue,
+    0 0 24px  lightblue;
 }
 
 .introductionHeader{
   font-size: 40px;
+  margin-top: 150px;
   margin-bottom: 90px;
   text-align: center;
 }
 
-.introduction{
-  text-align: center;
-  
+.introduction1{
+  display: flexbox;
+  text-align: left;
+  margin-left: 30px;
+  font-size: 20px;
+  background-color: gray;
+  width: 780px;
+  padding-left: 60px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.introduction2{
+  display: flexbox;
+  background-color: gray;
+  opacity: 0.8;
+  border-radius: 10px;
+  width: 750px;
+  text-align: left;
+  margin-left: 350px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  padding-left: 60px;
   list-style-position: inside;
 }
 
+.introduction3{
+   display: flexbox;
+  background-color: gray;
+  opacity: 0.8;
+  border-radius: 10px;
+  width: 850px;
+  text-align: left;
+  margin-left: 550px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+  padding-bottom: 40px;
+  padding-left: 60px;
+  padding-top: 40px;
+  list-style-position: inside;
+}
 
+.introduction2Header{
+  font-size: 40px;
+}
 
+.introduction3Header{
+  font-size: 40px;
+}
+
+.Top{
+    background-color: #0a2138;
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    z-index: 1000;
+    margin-bottom: 100px;
+}
 
