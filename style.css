@@ -14,6 +14,9 @@ body {
   border: none;
   border-bottom:1px solid #87c8fa;
   border-radius: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .mainHeader {
@@ -92,4 +95,18 @@ ul {
   .introduction2Header, .introduction3Header {
     font-size: 1.5rem;
   }
+}
+
+.introduction1,
+.introduction2,
+.introduction3 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.introduction1:hover,
+.introduction2:hover,
+.introduction3:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
