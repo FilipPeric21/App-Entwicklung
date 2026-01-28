@@ -135,3 +135,86 @@ ul {
   border-radius: 10px;        
   flex-shrink: 0;             /* Bild bleibt die Größe */
 }
+/* Container für Plattformen */
+.platform-container {
+  max-width: 1000px;
+  margin: 0 auto 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Einzelne Plattform-Box */
+.platform-card {
+  background: linear-gradient(145deg, #6c8edb, #5b7fc9);
+  border-radius: 14px;
+  padding: 35px 45px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effekt */
+.platform-card:hover {
+  transform: scale(1.015);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* Plattform Titel */
+.platform-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #234c65;
+}
+
+/* Text */
+.platform-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Listen */
+.platform-card ul {
+  padding-left: 20px;
+}
+
+.platform-card li {
+  margin-bottom: 10px;
+}
+
+/* Icons optisch größer */
+.platform-card h2 span {
+  font-size: 2.4rem;
+  margin-right: 10px;
+}
+
+/* Bild + Text nebeneinander */
+.platform-flex {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Bild */
+.platform-flex img {
+  width: 260px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .platform-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .platform-flex img {
+    width: 80%;
+  }
+
+  .platform-card {
+    padding: 25px;
+  }
+}
