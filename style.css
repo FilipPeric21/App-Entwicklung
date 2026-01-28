@@ -110,3 +110,20 @@ ul {
   transform: scale(1.01);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
+
+.app-link {
+  color: #0a2138;         
+  text-decoration: underline;
+}
+
+.app-link:visited {
+  color: #0a2138;         
+}
+
+.app-link:hover {
+  color: #0a2138;          
+}
+
+.app-link:active {
+  color: #0a2138;
+}
