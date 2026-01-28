@@ -43,7 +43,7 @@ body {
 }
 
 .nav-item:hover {
-  background-color: #87cefa;
+  background-color: #214e6a;
   color: #0a2138;
   transform: scale(1.04);
 }
@@ -56,7 +56,7 @@ body {
 }
 
 .introduction1, .introduction2, .introduction3 {
-  background-color: rgba(128, 128, 128, 0.85);
+  background-color: #6C8EDB;
   border-radius: 12px;
   padding: 30px 40px;
   margin: 40px auto;
@@ -68,7 +68,7 @@ body {
 .introduction2Header, .introduction3Header {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: #87cefa;
+  color: #234c65;
 }
 
 ul {
@@ -126,4 +126,12 @@ ul {
 
 .app-link:active {
   color: #0a2138;
+}
+
+
+.info-image {
+  width: 250px;               /* Bildgröße anpassen */
+  height: auto;
+  border-radius: 10px;        
+  flex-shrink: 0;             /* Bild bleibt die Größe */
 }
