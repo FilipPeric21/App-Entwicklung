@@ -45,7 +45,7 @@ body {
 .nav-item:hover {
   background-color: #87cefa;
   color: #0a2138;
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .introductionHeader {
@@ -107,6 +107,6 @@ ul {
 .introduction1:hover,
 .introduction2:hover,
 .introduction3:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
