@@ -1,110 +1,83 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Programmiersprachen & Tools</title>
+  <meta charset="UTF-8">
+  <title>Programmiersprachen & Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
-    <div class="Top">
-        <div class="mainHeader">Entwicklung von Apps</div>
-        <div class="navigator">
-            <a href="AppDevelopment.html" class="nav-item">Startseite</a>
-            <a href="BasicsAD.html" class="nav-item">Basics</a>
-            <a href="PlattformenAD.html" class="nav-item">Plattformen</a>
-            <a href="ToolsLanguagesAD.html" class="nav-item">Programmiersprachen & Tools</a>
-            <a href="Publishing.html" class="nav-item">Veröffentlichung & Wartung</a>
-        </div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold"><i class="bi bi-code-slash"></i> AppDevelopment</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="AppDevelopment.html"><i class="bi bi-house"></i> Startseite</a></li>
+        <li class="nav-item"><a class="nav-link" href="BasicsAD.html"><i class="bi bi-book"></i> Basics</a></li>
+        <li class="nav-item"><a class="nav-link" href="PlattformenAD.html"><i class="bi bi-phone-fill"></i> Plattformen</a></li>
+        <li class="nav-item"><a class="nav-link active" href="ToolsLanguagesAD.html"><i class="bi bi-code-slash"></i> Tools</a></li>
+        <li class="nav-item"><a class="nav-link" href="Publishing.html"><i class="bi bi-cloud-upload"></i> Veröffentlichung</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <div class="introductionHeader">Programmiersprachen & Tools</div>
-    <div class="introduction1">
-        <h2>Programmiersprachen bei der Appentwicklung</h2>
-        <p>Programmiersprachen sind die Grundlage jeder App.</p>
-        <p>Mit ihnen wird festgelegt, wie sich eine App verhält,</p>
-        <p>welche Funktionen sie besitzt und wie Nutzer mit ihr interagieren.</p>
+<header class="bg-light py-5 text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold"><i class="bi bi-code-slash"></i> Programmiersprachen & Tools</h1>
+    <p class="lead">Die Werkzeuge für die App-Entwicklung</p>
+  </div>
+</header>
 
-        <ul>
-            <li>
-                <strong>Java</strong> - eine der ältesten und bekanntesten Sprachen
-                für Android-Apps. Sie ist stabil und weit verbreitet.
-            </li>
-            <li>
-                <strong>Kotlin</strong> - moderne Alternative zu Java. Sie ist kürzer,
-                übersichtlicher und heute die bevorzugte Sprache für Android.
-            </li>
-            <li>
-                <strong>Swift</strong> - von Apple entwickelte Sprache für iOS-Apps.
-                Sie ist schnell, sicher und speziell auf Apple-Geräte abgestimmt.
-            </li>
-            <li>
-                <strong>JavaScript</strong> - wird vor allem für Web- und Hybrid-Apps
-                verwendet und läuft häufig zusammen mit Frameworks.
-            </li>
-            <li>
-                <strong>Dart</strong> - Programmiersprache von Google, die hauptsächlich
-                im Flutter-Framework eingesetzt wird.
-            </li>
-        </ul>
-    </div>
+<section class="container py-5">
 
-    <div class="introduction1">
-        <h2>Frameworks in der Appentwicklung</h2>
-        <p>Frameworks sind vorgefertigte Sammlungen aus Code,</p>
-        <p>Bibliotheken und Werkzeugen.</p>
-        <p>Sie helfen dabei, Apps schneller und effizienter zu entwickeln.</p>
+  <!-- Programmiersprachen -->
+  <div class="mb-5">
+    <h2><i class="bi bi-file-code"></i> Programmiersprachen</h2>
+    <ul>
+      <li><strong>Java</strong> - stabil und weit verbreitet für Android-Apps</li>
+      <li><strong>Kotlin</strong> - moderne und kompakte Alternative für Android</li>
+      <li><strong>Swift</strong> - Hauptsprache für iOS-Apps</li>
+      <li><strong>JavaScript</strong> - für Web- und Hybrid-Apps</li>
+      <li><strong>Dart</strong> - für Flutter-Apps</li>
+    </ul>
+  </div>
 
-        <ul>
-            <li>
-                <strong>Flutter</strong> - ermöglicht die Entwicklung einer App
-                für Android und iOS mit nur einer Codebasis.
-                Die Benutzeroberfläche wird komplett selbst gezeichnet.
-            </li>
-            <li>
-                <strong>React Native</strong> - basiert auf JavaScript und React.
-                Es nutzt native Komponenten und bietet gute Performance.
-            </li>
-            <li>
-                <strong>Ionic</strong> - Framework für Hybrid-Apps auf HTML, CSS
-                und JavaScript-Basis.
-            </li>
-            <li>
-                <strong>Unity</strong> - vor allem für Spiele-Apps und 3D-Anwendungen
-                geeignet.
-            </li>
-        </ul>
-    </div>
+  <!-- Frameworks -->
+  <div class="mb-5">
+    <h2><i class="bi bi-diagram-3-fill"></i> Frameworks</h2>
+    <ul>
+      <li><strong>Flutter</strong> - plattformübergreifend, eigene UI-Komponenten</li>
+      <li><strong>React Native</strong> - JavaScript-basiert, nutzt native Komponenten</li>
+      <li><strong>Ionic</strong> - Hybrid-Apps mit HTML/CSS/JS</li>
+      <li><strong>Unity</strong> - vor allem für Spiele & 3D-Anwendungen</li>
+    </ul>
+  </div>
 
-    <div class="introduction1">
-        <h2>Tools bei der Appentwicklung</h2>
-        <p>Tools sind Programme, die Entwickler bei der Arbeit unterstützen.</p>
-        <p>Sie werden zum Schreiben, Testen, Organisieren und Veröffentlichen</p>
-        <p>von Apps verwendet.</p>
+  <!-- Tools -->
+  <div class="mb-5">
+    <h2><i class="bi bi-tools"></i> Tools</h2>
+    <ul>
+      <li><strong>Android Studio</strong> - Entwicklungsumgebung für Android</li>
+      <li><strong>Xcode</strong> - Entwicklungsumgebung für iOS</li>
+      <li><strong>Visual Studio Code</strong> - universeller Editor</li>
+      <li><strong>Git & GitHub</strong> - Versionsverwaltung & Zusammenarbeit</li>
+      <li><strong>Firebase</strong> - Backend-Dienste wie Datenbanken, Anmeldung, Cloud-Funktionen</li>
+    </ul>
+  </div>
 
-        <ul>
-            <li>
-                <strong>Android Studio</strong> - offizielle Entwicklungsumgebung
-                für Android-Apps mit Emulator, Debugging und Projektverwaltung.
-            </li>
-            <li>
-                <strong>Xcode</strong> - Entwicklungsumgebung von Apple für iOS-Apps,
-                inklusive Simulator und Testwerkzeugen.
-            </li>
-            <li>
-                <strong>Visual Studio Code</strong> - leichter Code-Editor, der für
-                viele Programmiersprachen genutzt werden kann.
-            </li>
-            <li>
-                <strong>Git & GitHub</strong> - dienen zur Versionsverwaltung und
-                Zusammenarbeit im Team.
-            </li>
-            <li>
-                <strong>Firebase</strong> -    bietet Backend-Dienste wie Datenbanken,
-                Benutzeranmeldung und Cloud-Funktionen.
-            </li>
-        </ul>
-    </div>
+</section>
 
+<footer class="bg-dark text-white text-center py-3">
+  © 2026 AppDevelopment
+</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

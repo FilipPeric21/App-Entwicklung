@@ -1,134 +1,117 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Basics App Development</title>
+  <meta charset="UTF-8">
+  <title>Basics App Development</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
-    <div class="Top">
-        <div class="mainHeader">Entwicklung von Apps</div>
-        <div class="navigator">
-            <a href="AppDevelopment.html" class="nav-item">Startseite</a>
-            <a href="BasicsAD.html" class="nav-item">Basics</a>
-            <a href="PlattformenAD.html" class="nav-item">Plattformen</a>
-            <a href="ToolsLanguagesAD.html" class="nav-item">Programmiersprachen & Tools</a>
-            <a href="Publishing.html" class="nav-item">Veröffentlichung & Wartung</a>
-        </div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold"><i class="bi bi-book"></i> AppDevelopment</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="AppDevelopment.html"><i class="bi bi-house"></i> Startseite</a></li>
+        <li class="nav-item"><a class="nav-link active" href="BasicsAD.html"><i class="bi bi-book"></i> Basics</a></li>
+        <li class="nav-item"><a class="nav-link" href="PlattformenAD.html"><i class="bi bi-phone-fill"></i> Plattformen</a></li>
+        <li class="nav-item"><a class="nav-link" href="ToolsLanguagesAD.html"><i class="bi bi-code-slash"></i> Tools</a></li>
+        <li class="nav-item"><a class="nav-link" href="Publishing.html"><i class="bi bi-cloud-upload"></i> Veröffentlichung</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
 
-    <div class="introductionHeader">Die Basics</div>
+<header class="bg-light py-5 text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold"><i class="bi bi-book"></i> Basics der App-Entwicklung</h1>
+    <p class="lead">Grundlagen, Prinzipien und erste Schritte</p>
+  </div>
+</header>
 
-    <div class="introduction1">
-        <p>Hier findest du die Grundlagen der App-Entwicklung. Zum Beispiel:</p>
-        <ul>
-            <li>Grundprinzipien der Softwareentwicklung</li>
-            <li>Unterschied zwischen nativen, Web- und Hybrid-Apps</li>
-            <li>Einführung in Programmiersprachen und Tools</li>
-            <li>Planung, Design und Testing von Apps</li>
-        </ul>
-    </div>
+<section class="container py-5">
+  <!-- Einführung -->
+  <div class="mb-5">
+    <p>Hier findest du die Grundlagen der App-Entwicklung. Zum Beispiel:</p>
+    <ul>
+      <li>Grundprinzipien der Softwareentwicklung</li>
+      <li>Unterschied zwischen nativen, Web- und Hybrid-Apps</li>
+      <li>Einführung in Programmiersprachen und Tools</li>
+      <li>Planung, Design und Testing von Apps</li>
+    </ul>
+  </div>
 
-    <div class="introduction1">
-        <h2>Grundprinzipien der Softwareentwicklung</h2>
-        <p>
-            Die
-            <strong>
-                <a href="https://de.wikipedia.org/wiki/Softwareentwicklung"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="app-link">
-                    Softwareentwicklung
-                </a>
-            </strong>
-        folgt bestimmten Grundprinzipien,
-        </p>
-        <p>um Programme stabil, wartbar und benutzerfreundlich zu gestalten.</p>
-        <p>Diese Prinzipien spielen auch in der App-Entwicklung eine zentrale Rolle.</p>
-        
-        <ul>
-            <li><strong>Sauberer Code</strong> - gut lesbar und verständlich</li>
-            <li><strong>Modularität</strong> - Programme in kleinere Teile aufteilen</li>
-            <li><strong>Wiederverwendbarkeit</strong> - Code mehrfach nutzen</li>
-            <li><strong>Effizienz</strong> - sparsam mit Ressourcen umgehen</li>
-            <li><strong>Sicherheit</strong> - Schutz vor Fehlern und Angriffen</li>
-        </ul>
-    </div>
+  <!-- Grundprinzipien -->
+  <div class="mb-5">
+    <h2><i class="bi bi-gear-fill"></i> Grundprinzipien der Softwareentwicklung</h2>
+    <p>
+      Die <strong><a href="https://de.wikipedia.org/wiki/Softwareentwicklung" target="_blank" rel="noopener noreferrer">Softwareentwicklung</a></strong> folgt bestimmten Grundprinzipien, um Programme stabil, wartbar und benutzerfreundlich zu gestalten.
+    </p>
+    <ul>
+      <li><strong>Sauberer Code</strong> – gut lesbar und verständlich</li>
+      <li><strong>Modularität</strong> – Programme in kleinere Teile aufteilen</li>
+      <li><strong>Wiederverwendbarkeit</strong> – Code mehrfach nutzen</li>
+      <li><strong>Effizienz</strong> – sparsam mit Ressourcen umgehen</li>
+      <li><strong>Sicherheit</strong> – Schutz vor Fehlern und Angriffen</li>
+    </ul>
+  </div>
 
-    <div class="introduction1">
-        <h2>Unterschied zwischen nativen, Web- und Hybrid-Apps</h2>
-        <p>Apps lassen sich je nach technischer Umsetzung</p>
-        <p>
-            in 
-                <strong>
-                    <a href="https://www.brightsolutions.de/blog/native-vs-hybride-vs-web-app/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="app-link">
-                        verschiedene Typen
-                    </a>
-                </strong>
-            einteilen.
-        </p>
-        <p>Jeder App-Typ hat eigene Vor- und Nachteile.</p>
+  <!-- App-Typen -->
+  <div class="mb-5">
+    <h2><i class="bi bi-phone"></i> Unterschied zwischen nativen, Web- und Hybrid-Apps</h2>
+    <p>Apps lassen sich je nach technischer Umsetzung in verschiedene Typen einteilen.</p>
+    <ul>
+      <li><strong>Native Apps</strong> – speziell für ein Betriebssystem entwickelt, sehr leistungsfähig</li>
+      <li><strong>Web Apps</strong> – laufen im Browser, benötigen keine Installation</li>
+      <li><strong>Hybrid Apps</strong> – Kombination aus nativer und Web-Technologie</li>
+    </ul>
+  </div>
 
-        <ul>
-            <li>
-                <strong>Native Apps</strong> - speziell für ein Betriebssystem entwickelt
-                und sehr leistungsfähig
-            </li>
-            <li>
-                <strong>Web Apps</strong> - laufen im Browser und benötigen keine Installation
-            </li>
-            <li>
-                <strong>Hybrid Apps</strong> - Kombination aus nativer und Web-Technologie
-            </li>
-        </ul>
-    </div>
+  <!-- Programmiersprachen -->
+  <div class="mb-5">
+    <h2><i class="bi bi-code-slash"></i> Verwendete Programmiersprachen</h2>
+    <ul>
+      <li><strong>Java</strong> – weit verbreitet für Android-Apps</li>
+      <li><strong>Kotlin</strong> – moderne Programmiersprache für Android</li>
+      <li><strong>Swift</strong> – Hauptsprache für iOS-Apps</li>
+      <li><strong>JavaScript</strong> – für Web- und Hybrid-Apps</li>
+      <li><strong>Dart</strong> – verwendet im Flutter-Framework</li>
+    </ul>
+  </div>
 
-    <div class="introduction1">
-        <h2>Verwendete Programmiersprachen</h2>
-        <p>Für die App-Entwicklung werden verschiedene</p>
-        <p><strong>Programmiersprachen</strong> eingesetzt.</p>
-        <p>Welche Sprache verwendet wird, hängt von der Plattform</p>
-        <p>und der Art der App ab.</p>
-        
-        <ul>
-            <li><strong>Java</strong> - weit verbreitet für Android-Apps</li>
-            <li><strong>Kotlin</strong> - moderne Programmiersprache für Android</li>
-            <li><strong>Swift</strong> - Hauptsprache für iOS-Apps</li>
-            <li><strong>JavaScript</strong> - für Web- und Hybrid-Apps</li>
-            <li><strong>Dart</strong> - используется im Flutter-Framework</li>
-        </ul>
-    </div>
+  <!-- Tools -->
+  <div class="mb-5">
+    <h2><i class="bi bi-tools"></i> Verwendete Entwicklungswerkzeuge</h2>
+    <ul>
+      <li><strong>Android Studio</strong> – Entwicklungsumgebung für Android</li>
+      <li><strong>Xcode</strong> – Entwicklungsumgebung für iOS</li>
+      <li><strong>Visual Studio Code</strong> – vielseitiger Code-Editor</li>
+      <li><strong>Flutter</strong> – Framework für plattformübergreifende Apps</li>
+      <li><strong>React Native</strong> – Framework auf JavaScript-Basis</li>
+    </ul>
+  </div>
 
-    <div class="introduction1">
-        <h2>Verwendete Entwicklungswerkzeuge</h2>
-        <p>Neben Programmiersprachen werden auch spezielle</p>
-        <p><strong>Entwicklungswerkzeuge</strong> benötigt.</p>
-        <p>Diese helfen beim Schreiben, Testen und Veröffentlichen</p>
-        <p>von Apps.</p>
-        
-        <ul>
-            <li><strong>Android Studio</strong> - Entwicklungsumgebung für Android</li>
-            <li><strong>Xcode</strong> - Entwicklungsumgebung für iOS</li>
-            <li><strong>Visual Studio Code</strong> - vielseitiger Code-Editor</li>
-            <li><strong>Flutter</strong> - Framework für plattformübergreifende Apps</li>
-            <li><strong>React Native</strong> - Framework auf JavaScript-Basis</li>
-        </ul>
-    </div>
+  <!-- Planung & Design -->
+  <div class="mb-5">
+    <h2><i class="bi bi-pencil-square"></i> Planung, Design und Testing von Apps</h2>
+    <ul>
+      <li><strong>Planung</strong> – Ziele, Funktionen und Zielgruppe festlegen</li>
+      <li><strong>Design</strong> – Benutzeroberfläche (UI) und Nutzererlebnis (UX)</li>
+      <li><strong>Testing</strong> – Fehler finden und Stabilität prüfen</li>
+    </ul>
+  </div>
+</section>
 
+<footer class="bg-dark text-white text-center py-3">
+  © 2026 AppDevelopment
+</footer>
 
-    <div class="introduction1">
-        <h2>Planung, Design und Testing von Apps</h2>
-        <p>Eine gute App entsteht durch sorgfältige Planung,</p>
-        <p>ansprechendes Design und gründliches Testen.</p>
-        
-        <ul>
-            <li><strong>Planung</strong> - Ziele, Funktionen und Zielgruppe festlegen</li>
-            <li><strong>Design</strong> - Benutzeroberfläche (UI) und Nutzererlebnis (UX)</li>
-            <li><strong>Testing</strong> - Fehler finden und Stabilität prüfen</li>
-        </ul>
-    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

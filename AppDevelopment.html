@@ -1,61 +1,88 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>AppDevelopment</title>
+  <meta charset="UTF-8">
+  <title>AppDevelopment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
-    <div class="Top">
-        <div class="mainHeader">Entwicklung von Apps</div>
-        <div class="navigator">
-            <a href="AppDevelopment.html" class="nav-item">Startseite</a>
-            <a href="BasicsAD.html" class="nav-item">Basics</a>
-            <a href="PlattformenAD.html" class="nav-item">Plattformen</a>
-            <a href="ToolsLanguagesAD.html" class="nav-item">Programmiersprachen & Tools</a>
-            <a href="Publishing.html" class="nav-item">Veröffentlichung & Wartung</a>
-        </div>
-    </div>
 
-    <div class="introductionHeader">Was ist App Development?</div>
-    <img src="images/bild1.png" alt="App Basics" class="info-image">
-    <div class="introduction1">
-    <p>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold"><i class="bi bi-phone"></i> AppDevelopment</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="AppDevelopment.html"><i class="bi bi-house"></i> Startseite</a></li>
+        <li class="nav-item"><a class="nav-link" href="BasicsAD.html"><i class="bi bi-book"></i> Basics</a></li>
+        <li class="nav-item"><a class="nav-link" href="PlattformenAD.html"><i class="bi bi-phone-fill"></i> Plattformen</a></li>
+        <li class="nav-item"><a class="nav-link" href="ToolsLanguagesAD.html"><i class="bi bi-code-slash"></i> Sprachen & Tools</a></li>
+        <li class="nav-item"><a class="nav-link" href="Publishing.html"><i class="bi bi-cloud-upload"></i> Veröffentlichung</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="bg-light py-5 text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold"><i class="bi bi-phone"></i> Entwicklung von Apps</h1>
+    <p class="lead">Der komplette Prozess vom Konzept bis zur Veröffentlichung</p>
+  </div>
+</header>
+
+<!-- EINLEITUNG -->
+<section class="container py-5">
+  <div class="row">
+    <div class="col-lg-6">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="img-fluid rounded shadow-sm" alt="App Basics">
+    </div>
+    <div class="col-lg-6">
+      <h2>Was ist App Development?</h2>
+      <p>
         <strong>
-            <a href="https://www.zweitag.de/themen/app-entwicklung"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="app-link">
-            App Development
-            </a>
-        </strong>
-        (deutsch App-Entwicklung) bezeichnet den gesamten Prozess,
-    </p>
-        <p>in dem Software-Anwendungen für Smartphones, Tablets oder andere</p>
-        <p>digitale Geräte erstellt werden.</p>
-        <p>Dabei geht es nicht nur um das Programmieren, sondern auch um das</p>
-        <p>Planen, Gestalten, Testen und Veröffentlichen einer App.</p>
+          <a href="https://www.zweitag.de/themen/app-entwicklung" target="_blank" rel="noopener noreferrer">
+          App Development
+          </a>
+        </strong> (deutsch App-Entwicklung) bezeichnet den gesamten Prozess, in dem Software-Anwendungen für Smartphones, Tablets oder andere digitale Geräte erstellt werden.
+      </p>
+      <p>Dabei geht es nicht nur um das Programmieren, sondern auch um das Planen, Gestalten, Testen und Veröffentlichen einer App.</p>
     </div>
+  </div>
 
-    <div class="introduction2">
-        <div class="introduction2Header">Man unterscheidet vor allem zwischen:</div>
-        <ul>
-            <li><strong>Native Apps</strong> - speziell für ein Betriebssystem entwickelt (z. B. iOS oder Android)</li>
-            <li><strong>Web Apps</strong> - laufen im Browser, keine Installation nötig</li>
-            <li><strong>Hybrid Apps</strong> - Kombination aus beiden Varianten</li>
-        </ul>
-    </div>
+  <div class="mt-5">
+    <h3><i class="bi bi-card-list"></i> App-Typen</h3>
+    <ul>
+      <li><strong>Native Apps</strong> - speziell für ein Betriebssystem entwickelt (z. B. iOS oder Android)</li>
+      <li><strong>Web Apps</strong> - laufen im Browser, keine Installation nötig</li>
+      <li><strong>Hybrid Apps</strong> - Kombination aus beiden Varianten</li>
+    </ul>
+  </div>
 
-    <div class="introduction3">
-        <div class="introduction3Header">Der App-Entwicklungsprozess umfasst typischerweise:</div>
-        <ul>
-            <li><strong>Idee & Konzept</strong> - Welche Probleme soll die App lösen?</li>
-            <li><strong>Design & Benutzeroberfläche</strong> - Wie sieht sie aus und wie fühlt sie sich an?</li>
-            <li><strong>Programmierung</strong> - Umsetzung mit Programmiersprachen und Frameworks</li>
-            <li><strong>Testing & Fehlerbehebung</strong> - Sicherstellen, dass alles stabil läuft</li>
-            <li><strong>Veröffentlichung</strong> - z. B. im App Store oder Google Play Store</li>
-            <li><strong>Wartung & Updates</strong> - Neue Funktionen, Fehlerbehebungen und Optimierungen</li>
-        </ul>
-    </div>
+  <div class="mt-4">
+    <h3><i class="bi bi-gear"></i> Entwicklungsprozess</h3>
+    <ul>
+      <li><strong>Idee & Konzept</strong> - Welche Probleme soll die App lösen?</li>
+      <li><strong>Design & Benutzeroberfläche</strong> - Wie sieht sie aus und wie fühlt sie sich an?</li>
+      <li><strong>Programmierung</strong> - Umsetzung mit Programmiersprachen und Frameworks</li>
+      <li><strong>Testing & Fehlerbehebung</strong> - Sicherstellen, dass alles stabil läuft</li>
+      <li><strong>Veröffentlichung</strong> - z. B. im App Store oder Google Play Store</li>
+      <li><strong>Wartung & Updates</strong> - Neue Funktionen, Fehlerbehebungen und Optimierungen</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-3">
+  © 2026 AppDevelopment
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

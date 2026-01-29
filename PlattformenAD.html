@@ -1,84 +1,114 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Plattformen</title>
+  <meta charset="UTF-8">
+  <title>Plattformen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
 
-    <div class="Top">
-        <div class="mainHeader">Entwicklung von Apps</div>
-        <div class="navigator">
-            <a href="AppDevelopment.html" class="nav-item">Startseite</a>
-            <a href="BasicsAD.html" class="nav-item">Basics</a>
-            <a href="PlattformenAD.html" class="nav-item">Plattformen</a>
-            <a href="ToolsLanguagesAD.html" class="nav-item">Programmiersprachen & Tools</a>
-            <a href="Publishing.html" class="nav-item">Veröffentlichung & Wartung</a>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold"><i class="bi bi-phone-fill"></i> AppDevelopment</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="AppDevelopment.html"><i class="bi bi-house"></i> Startseite</a></li>
+        <li class="nav-item"><a class="nav-link" href="BasicsAD.html"><i class="bi bi-book"></i> Basics</a></li>
+        <li class="nav-item"><a class="nav-link active" href="PlattformenAD.html"><i class="bi bi-phone-fill"></i> Plattformen</a></li>
+        <li class="nav-item"><a class="nav-link" href="ToolsLanguagesAD.html"><i class="bi bi-code-slash"></i> Tools</a></li>
+        <li class="nav-item"><a class="nav-link" href="Publishing.html"><i class="bi bi-cloud-upload"></i> Veröffentlichung</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-light py-5 text-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold"><i class="bi bi-phone-fill"></i> Plattformen</h1>
+    <p class="lead">Welche Plattformen gibt es und was sind ihre Eigenschaften?</p>
+  </div>
+</header>
+
+<section class="container py-5">
+  <div class="row g-4">
+
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" class="card-img-top" alt="Android">
+        <div class="card-body">
+          <h5><i class="bi bi-android2"></i> Android</h5>
+          <p>Das weltweit meistgenutzte mobile Betriebssystem von Google. Läuft auf Smartphones, Tablets, Smart-TVs und Wearables.</p>
+          <ul>
+            <li>Programmiersprachen: Java, Kotlin</li>
+            <li>Entwicklungsumgebung: Android Studio</li>
+            <li>Veröffentlichung: Google Play Store</li>
+            <li>Große Nutzerbasis & offene Plattform</li>
+          </ul>
         </div>
+      </div>
     </div>
 
-    <div class="introductionHeader">Plattformen</div>
-
-    <div class="platform-container">
-
-        <div class="platform-box">
-            <h2> Android</h2>
-            <p>
-                Android ist das weltweit meistgenutzte mobile Betriebssystem und wurde von Google entwickelt.
-                Apps laufen auf Smartphones, Tablets, Smart-TVs und Wearables.
-            </p>
-            <ul>
-                <li>Programmiersprachen: Java, Kotlin</li>
-                <li>Entwicklungsumgebung: Android Studio</li>
-                <li>Veröffentlichung: Google Play Store</li>
-                <li>Große Nutzerbasis & offene Plattform</li>
-            </ul>
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1512499617640-c2f9997b0f6e" class="card-img-top" alt="iOS">
+        <div class="card-body">
+          <h5><i class="bi bi-apple"></i> iOS</h5>
+          <p>Das Betriebssystem von Apple, läuft auf iPhones und iPads. Apple legt großen Wert auf Sicherheit und Design.</p>
+          <ul>
+            <li>Programmiersprachen: Swift, Objective-C</li>
+            <li>Entwicklungsumgebung: Xcode</li>
+            <li>Veröffentlichung: Apple App Store</li>
+            <li>Entwicklung nur auf macOS möglich</li>
+          </ul>
         </div>
-
-        <div class="platform-box">
-            <h2> iOS</h2>
-            <p>
-                iOS ist das Betriebssystem von Apple und läuft auf iPhones und iPads.
-                Apple legt großen Wert auf Sicherheit und Design.
-            </p>
-            <ul>
-                <li>Programmiersprachen: Swift, Objective-C</li>
-                <li>Entwicklungsumgebung: Xcode</li>
-                <li>Veröffentlichung: Apple App Store</li>
-                <li>Entwicklung nur auf macOS möglich</li>
-            </ul>
-        </div>
-
-        <div class="platform-box">
-            <h2> Web-Apps</h2>
-            <p>
-                Web-Apps laufen direkt im Browser und müssen nicht installiert werden.
-                Sie funktionieren auf nahezu allen Geräten.
-            </p>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>Frameworks: React, Angular, Vue</li>
-                <li>Plattformunabhängig</li>
-                <li>Eingeschränkter Gerätezugriff</li>
-            </ul>
-        </div>
-
-        <div class="platform-box">
-            <h2> Cross-Platform</h2>
-            <p>
-                Mit Cross-Platform-Frameworks können Apps mit einer Codebasis
-                für mehrere Plattformen entwickelt werden.
-            </p>
-            <ul>
-                <li>Flutter, React Native, Xamarin</li>
-                <li>Geringere Entwicklungszeit</li>
-                <li>Kosteneffizient</li>
-                <li>Teilweise Performance-Nachteile</li>
-            </ul>
-        </div>
-
+      </div>
     </div>
 
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="card-img-top" alt="Web Apps">
+        <div class="card-body">
+          <h5><i class="bi bi-globe"></i> Web-Apps</h5>
+          <p>Laufen direkt im Browser und müssen nicht installiert werden. Funktionieren auf nahezu allen Geräten.</p>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Frameworks: React, Angular, Vue</li>
+            <li>Plattformunabhängig</li>
+            <li>Eingeschränkter Gerätezugriff</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <img src="https://images.unsplash.com/photo-1581091012184-2b9b1a8a7da7" class="card-img-top" alt="Cross Platform">
+        <div class="card-body">
+          <h5><i class="bi bi-phone-landscape"></i> Cross-Platform</h5>
+          <p>Mit Frameworks können Apps für mehrere Plattformen aus einer Codebasis entwickelt werden.</p>
+          <ul>
+            <li>Flutter, React Native, Xamarin</li>
+            <li>Geringere Entwicklungszeit</li>
+            <li>Kosteneffizient</li>
+            <li>Teilweise Performance-Nachteile</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-3">
+  © 2026 AppDevelopment
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
