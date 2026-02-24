@@ -1,195 +1,36 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0a2138;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
+/* Navigation Hover-Effekt (ehemals .nav-item / .navigator) */
+.nav-item-animated {
+  transition: transform 0.3s;
 }
-
-.Top {
-  background-color: #0a2138;
-  width: 100%;
-  padding: 20px 0;
-  text-align: center;
-  border: none;
-  border-bottom:1px solid #87c8fa;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.mainHeader {
-  font-size: 3rem;
-  color: #87cefa;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.navigator {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.nav-item {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  background-color: #1c3353;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.nav-item:hover {
-  background-color: #214e6a;
-  color: #0a2138;
+.nav-item-animated:hover {
   transform: scale(1.04);
 }
 
-.introductionHeader {
-  font-size: 2.5rem;
-  text-align: center;
-  margin: 60px 0 50px 0;
-  color: #add8e6;
-}
-
-.introduction1, .introduction2, .introduction3 {
-  background-color: #6C8EDB;
-  border-radius: 12px;
-  padding: 30px 40px;
-  margin: 40px auto;
-  max-width: 900px;
-  line-height: 1.6;
-  font-size: 1.1rem;
-}
-
-.introduction2Header, .introduction3Header {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #234c65;
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-@media (max-width: 1024px) {
-  .introduction1, .introduction2, .introduction3 {
-    padding: 20px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .mainHeader {
-    font-size: 2.2rem;
-  }
-
-  .introductionHeader {
-    font-size: 2rem;
-  }
-
-  .introduction2Header, .introduction3Header {
-    font-size: 1.5rem;
-  }
-}
-
-.introduction1,
-.introduction2,
-.introduction3 {
+/* Hover-Effekte für Text-Abschnitte (ehemals .introduction1, 2, 3) */
+.content-section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.introduction1:hover,
-.introduction2:hover,
-.introduction3:hover {
-  transform: scale(1.01);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-}
-
-.app-link {
-  color: #0a2138;         
-  text-decoration: underline;
-}
-
-.app-link:visited {
-  color: #0a2138;         
-}
-
-.app-link:hover {
-  color: #0a2138;          
-}
-
-.app-link:active {
-  color: #0a2138;
-}
-
-
-.info-image {
-  width: 250px;             
-  height: auto;
-  border-radius: 10px;        
-  flex-shrink: 0;             
-}
-
-.platform-container {
-  max-width: 900px;
-  margin: 0 auto 80px auto;
-  display: grid;
-  gap: 30px;
-}
-
-
-.platform-box {
-  background-color: #6C8EDB;
   border-radius: 12px;
-  padding: 30px 35px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  padding: 15px; /* Leichtes Padding für den Schatten-Effekt */
+}
+.content-section:hover {
+  transform: scale(1.01);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover-Effekte für Karten (ehemals .platform-box) */
+.custom-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-
-.platform-box:hover {
+.custom-card:hover {
   transform: scale(1.04);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
-.platform-box h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 1.9rem;
-  color: #234c65;
+/* Eigene Links (ehemals .app-link) */
+.custom-link {
+  color: inherit;
+  text-decoration: underline;
 }
-
-
-.platform-box p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #0a2138;
-}
-
-
-.platform-box ul {
-  padding-left: 20px;
-}
-
-.platform-box li {
-  margin-bottom: 8px;
-  color: #0a2138;
-}
-
-
-@media (max-width: 900px) {
-  .platform-box {
-    padding: 22px;
-  }
-
-  .platform-box h2 {
-    font-size: 1.6rem;
-  }
+.custom-link:hover {
+  color: #0d6efd; /* Passt zum Bootstrap-Standard */
 }
