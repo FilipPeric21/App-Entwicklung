@@ -1,3 +1,4 @@
+/* Navigation Animation */
 .nav-item-animated {
   transition: transform 0.3s;
 }
@@ -5,32 +6,38 @@
   transform: scale(1.04);
 }
 
+/* Content Section */
 .content-section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 12px;
-  padding: 15px; 
+  padding: 30px;
+  background-color: #ffffff;
 }
 .content-section:hover {
   transform: scale(1.01);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
+/* Cards */
 .custom-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 12px;
 }
 .custom-card:hover {
   transform: scale(1.04);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
+/* Links */
 .custom-link {
   color: inherit;
   text-decoration: underline;
 }
 .custom-link:hover {
-  color: #0d6efd; 
+  color: #0d6efd;
 }
 
-.col-lg-6{
-  font-size: 22px;
+/* Background */
+body {
+  background-color: #f8f9fa;
 }
