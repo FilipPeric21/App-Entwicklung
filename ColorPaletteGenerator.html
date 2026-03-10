@@ -23,7 +23,7 @@
           <li class="nav-item nav-item-animated"><a class="nav-link" href="PlattformenAD.html"><i class="bi bi-phone-fill"></i> Plattformen</a></li>
           <li class="nav-item nav-item-animated"><a class="nav-link" href="ToolsLanguagesAD.html"><i class="bi bi-code-slash"></i> Sprachen & Tools</a></li>
           <li class="nav-item nav-item-animated"><a class="nav-link" href="Publishing.html"><i class="bi bi-cloud-upload"></i> Veröffentlichung</a></li>
-          <li class="nav-item nav-item-animated"><a class="nav-link active" href="IconGenerator.html"><i class="bi bi-images"></i> Icon-Generator</a></li>
+          <li class="nav-item nav-item-animated"><a class="nav-link active" href="ColorPaletteGenerator.html"><i class="bi bi-images"></i> Color-Palette-Generator</a></li>
         </ul>
       </div>
     </div>
@@ -37,18 +37,27 @@
 </header>
 
 <div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div id="drop-zone" class="border border-primary border-dashed rounded-3 p-5 text-center bg-light" style="border-style: dashed !important; cursor: pointer;">
-                <i class="bi bi-cloud-arrow-up display-1 text-primary"></i>
-                <h4 class="mt-3">Bild hierher ziehen</h4>
-                <p>oder klicken, um Datei zu wählen</p>
-                
-                <input type="file" id="file-input" accept="image/png, image/jpeg" style="display: none;">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card p-4 shadow-sm">
+                <h4>Wähle deine Primärfarbe</h4>
+                <input type="color" id="baseColor" class="form-control form-control-color w-100 mb-3" value="#0d6efd">
+                <hr>
+                <h6>Vorgeschlagene Web-Farben:</h6>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between">Sekundär: <span id="label-secondary">#...</span></li>
+                    <li class="list-group-item d-flex justify-content-between">Akzent: <span id="label-accent">#...</span></li>
+                    <li class="list-group-item d-flex justify-content-between">Hintergrund: <span id="label-bg">#...</span></li>
+                </ul>
             </div>
-            
-            <div id="file-info" class="mt-3 text-center" style="display: none;">
-                <span class="badge bg-success" id="filename-display"></span>
+        </div>
+
+        <div class="col-md-8">
+            <div id="preview-box" class="p-5 rounded-3 border shadow-sm" style="background-color: #f8f9fa;">
+                <h2 id="preview-text">So sieht deine Webseite aus</h2>
+                <p>Dies ist ein Beispieltext, um die Lesbarkeit auf dem Hintergrund zu prüfen.</p>
+                <button id="preview-button-primary" class="btn btn-lg me-2">Haupt-Button</button>
+                <button id="preview-button-accent" class="btn btn-lg">Akzent-Button</button>
             </div>
         </div>
     </div>
