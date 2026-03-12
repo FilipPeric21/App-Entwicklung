@@ -42,9 +42,35 @@ function getContrastColor(hexColor) {
     const g = parseInt(hexColor.substring(3, 5), 16);
     const b = parseInt(hexColor.substring(5, 7), 16);
     
-    // Luminanz-Berechnung (Helligkeit für das menschliche Auge)
+    
     const brightness = (r * 299 + g * 587 + b * 114) / 1000;
     
-    // Wenn hell, dann schwarze Schrift, wenn dunkel, dann weiße Schrift
+    // Schrift schwarz oder weiß je nach Helligkeit des Hintergrundes
     return brightness > 128 ? '#000000' : '#ffffff';
+}
+
+// Macht eine Farbe heller (positives %) oder dunkler (negatives %)
+function adjustBrightness(hex, percent) {
+    let r = parseInt(hex.substring(1, 3), 16);
+    let g = parseInt(hex.substring(3, 5), 16);
+    let b = parseInt(hex.substring(5, 7), 16);
+
+    r = Math.round(Math.min(255, Math.max(0, r + (percent / 100) * 255)));
+    g = Math.round(Math.min(255, Math.max(0, g + (percent / 100) * 255)));
+    b = Math.round(Math.min(255, Math.max(0, b + (percent / 100) * 255)));
+
+    return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+}
+
+// Findet die Komplementärfarbe 
+function getComplementaryColor(hex) {
+    let r = parseInt(hex.substring(1, 3), 16);
+    let g = parseInt(hex.substring(3, 5), 16);
+    let b = parseInt(hex.substring(5, 7), 16);
+
+    r = 255 - r;
+    g = 255 - g;
+    b = 255 - b;
+
+    return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
 }
