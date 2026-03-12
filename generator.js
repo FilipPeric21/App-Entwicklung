@@ -35,3 +35,16 @@ colorPicker.addEventListener('input', () => {
     labelAccent.textContent = accentColor;
     labelBg.textContent = backgroundColor;
 });
+
+function getContrastColor(hexColor) {
+    // Hex-Code in Rot, Grün und Blau (RGB) zerlegen
+    const r = parseInt(hexColor.substring(1, 3), 16);
+    const g = parseInt(hexColor.substring(3, 5), 16);
+    const b = parseInt(hexColor.substring(5, 7), 16);
+    
+    // Luminanz-Berechnung (Helligkeit für das menschliche Auge)
+    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+    
+    // Wenn hell, dann schwarze Schrift, wenn dunkel, dann weiße Schrift
+    return brightness > 128 ? '#000000' : '#ffffff';
+}
