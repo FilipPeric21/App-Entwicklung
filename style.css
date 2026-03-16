@@ -41,3 +41,29 @@
 body {
   background-color: #f8f9fa;
 }
+/* Hover */
+.animated-link {
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animated-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Klick Animation */
+.page-zoom {
+  animation: zoomPage 0.4s forwards;
+}
+
+@keyframes zoomPage {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
