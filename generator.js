@@ -79,3 +79,24 @@ function getComplementaryColor(hex) {
 window.onload = () => {
     colorPicker.dispatchEvent(new Event('input'));
 };
+// Kopier-Funktion
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        alert(`Kopiert: ${text}`);
+    }).catch(err => {
+        console.error('Fehler beim Kopieren:', err);
+    });
+}
+
+// Klick-Events für Labels
+labelSecondary.addEventListener('click', () => {
+    copyToClipboard(labelSecondary.textContent);
+});
+
+labelAccent.addEventListener('click', () => {
+    copyToClipboard(labelAccent.textContent);
+});
+
+labelBg.addEventListener('click', () => {
+    copyToClipboard(labelBg.textContent);
+});
