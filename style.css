@@ -76,3 +76,86 @@ body {
   color: #0d6efd;
 }
 
+/* ===== DARK MODE STYLES ===== */
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+  background-color: #0b5ed7;
+}
+
+/* Dark Mode Variablen */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .bg-light {
+  background-color: #2d2d2d !important;
+  color: #e0e0e0;
+}
+
+body.dark-mode .content-section {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+body.dark-mode .content-section:hover {
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .custom-card {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border-color: #404040;
+}
+
+body.dark-mode .custom-card:hover {
+  box-shadow: 0 12px 28px rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .card {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border-color: #404040;
+}
+
+body.dark-mode .list-group-item {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border-color: #404040;
+}
+
+body.dark-mode .custom-link:hover {
+  color: #6ea8fe;
+}
+
+body.dark-mode footer {
+  background-color: #0d0d0d !important;
+}
+
+body.dark-mode .navbar {
+  background-color: #0d0d0d !important;
+}
+
+/* Dark Mode für Color Palette Generator */
+body.dark-mode #preview-box {
+  border-color: #404040 !important;
+}
