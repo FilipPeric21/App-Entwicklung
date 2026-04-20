@@ -1,25 +1,3 @@
-/* Random Color Button */
-#random-color-btn {
-  font-weight: 600;
-  border-radius: 10px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-#random-color-btn:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
-}
-
-/* Dark Mode für Button */
-body.dark-mode #random-color-btn {
-  background-color: #444;
-  border-color: #555;
-  color: #fff;
-}
-
-body.dark-mode #random-color-btn:hover {
-  background-color: #666;
-}
 /* Navigation Animation */
 .nav-item-animated {
   transition: transform 0.3s;
