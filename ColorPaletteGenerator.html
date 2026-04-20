@@ -32,7 +32,7 @@
 <header class="bg-light py-5 text-center">
   <div class="container">
     <h1 class="display-5 fw-bold"><i class="bi bi-images"></i> Color-Palette-Generator</h1>
-    <p class="lead">Deine Webfarbe wählen, fertiges Design erhalten.    </p>
+    <p class="lead">Deine Webfarbe wählen, fertiges Design erhalten.</p>
   </div>
 </header>
 
@@ -41,19 +41,27 @@
         <div class="col-md-4">
             <div class="card p-4 shadow-sm">
                 <h4>Wähle deine Primärfarbe</h4>
+
                 <input type="color" id="baseColor" class="form-control form-control-color w-100 mb-3" value="#0d6efd">
+
+                <!-- 🎲 RANDOM BUTTON -->
+                <button id="random-color-btn" class="btn btn-secondary w-100 mb-3">
+                  🎲 Zufallsfarbe generieren
+                </button>
+
                 <hr>
+
                 <h6>Vorgeschlagene Web-Farben:</h6>
                 <ul class="list-group list-group-flush">
-          <li class="list-group-item d-flex justify-content-between">
-  Sekundär: <span id="label-secondary" class="copyable">#...</span>
-</li>
-<li class="list-group-item d-flex justify-content-between">
-  Akzent: <span id="label-accent" class="copyable">#...</span>
-</li>
-<li class="list-group-item d-flex justify-content-between">
-  Hintergrund: <span id="label-bg" class="copyable">#...</span>
-</li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    Sekundär: <span id="label-secondary" class="copyable">#...</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    Akzent: <span id="label-accent" class="copyable">#...</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    Hintergrund: <span id="label-bg" class="copyable">#...</span>
+                  </li>
                 </ul>
             </div>
         </div>

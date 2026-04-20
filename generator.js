@@ -1,5 +1,6 @@
 //sucht alle wichtigen Elemente anhand ihrer ID
 const colorPicker = document.getElementById('baseColor');
+const randomColorBtn = document.getElementById('random-color-btn');
 const previewBox = document.getElementById('preview-box');
 const previewText = document.getElementById('preview-text');
 const btnPrimary = document.getElementById('preview-button-primary');
@@ -62,6 +63,7 @@ function adjustBrightness(hex, percent) {
     return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
 }
 
+
 // Findet die Komplementärfarbe 
 function getComplementaryColor(hex) {
     let r = parseInt(hex.substring(1, 3), 16);
@@ -99,4 +101,26 @@ labelAccent.addEventListener('click', () => {
 
 labelBg.addEventListener('click', () => {
     copyToClipboard(labelBg.textContent);
+});
+// Zufällige Farbe generieren
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+
+    return color;
+}
+
+// Klick auf Random-Button
+randomColorBtn.addEventListener('click', () => {
+    const randomColor = getRandomColor();
+
+    // setzt neue Farbe
+    colorPicker.value = randomColor;
+
+    // löst dein bestehendes System aus
+    colorPicker.dispatchEvent(new Event('input'));
 });
