@@ -5,6 +5,7 @@ const previewBox = document.getElementById('preview-box');
 const previewText = document.getElementById('preview-text');
 const btnPrimary = document.getElementById('preview-button-primary');
 const btnAccent = document.getElementById('preview-button-accent');
+const previewParagraph = document.getElementById('preview-paragraph');
 
 // Die Text-Labels in denen die Hexcodes stehen werden
 const labelSecondary = document.getElementById('label-secondary');
@@ -29,7 +30,8 @@ colorPicker.addEventListener('input', () => {
     btnAccent.style.backgroundColor = accentColor;
     btnAccent.style.color = getContrastColor(accentColor);
 
-    previewText.style.color = primaryColor;
+    previewText.style.color = getContrastColor(backgroundColor);
+    previewParagraph.style.color = getContrastColor(backgroundColor);
 
     // Die Hex-Codes in die Labels schreiben
     labelSecondary.textContent = secondaryColor;
