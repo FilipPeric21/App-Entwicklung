@@ -18,7 +18,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item nav-item-animated"><a class="nav-link active" href="AppDevelopment.html"><i class="bi bi-house"></i> Startseite</a></li>
+        <li class="nav-item nav-item-animated"><a class="nav-link" href="AppDevelopment.html"><i class="bi bi-house"></i> Startseite</a></li>
         <li class="nav-item nav-item-animated"><a class="nav-link" href="BasicsAD.html"><i class="bi bi-book"></i> Basics</a></li>
         <li class="nav-item nav-item-animated"><a class="nav-link" href="PlattformenAD.html"><i class="bi bi-phone-fill"></i> Plattformen</a></li>
         <li class="nav-item nav-item-animated"><a class="nav-link" href="ToolsLanguagesAD.html"><i class="bi bi-code-slash"></i> Sprachen & Tools</a></li>
@@ -37,43 +37,7 @@
 </header>
 
 <section class="container py-5">
-  <div class="row content-section">
-    <div class="col-lg-6">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="img-fluid rounded shadow-sm" alt="App Basics">
-    </div>
-    <div class="col-lg-6">
-      <h2>Was ist App Development?</h2>
-      <p>
-        <strong>
-          <a href="https://www.zweitag.de/themen/app-entwicklung" class="custom-link" target="_blank" rel="noopener noreferrer">
-          App Development
-          </a>
-        </strong> (deutsch App-Entwicklung) bezeichnet den gesamten Prozess, in dem Software-Anwendungen für Smartphones, Tablets oder andere digitale Geräte erstellt werden.
-      </p>
-      <p>Dabei geht es nicht nur um das Programmieren, sondern auch um das Planen, Gestalten, Testen und Veröffentlichen einer App.</p>
-    </div>
-  </div>
-
-  <div class="mt-5 content-section">
-    <h3><i class="bi bi-card-list"></i> App-Typen</h3>
-    <ul>
-      <li><strong>Native Apps</strong> - speziell für ein Betriebssystem entwickelt (z. B. iOS oder Android)</li>
-      <li><strong>Web Apps</strong> - laufen im Browser, keine Installation nötig</li>
-      <li><strong>Hybrid Apps</strong> - Kombination aus beiden Varianten</li>
-    </ul>
-  </div>
-
-  <div class="mt-4 content-section">
-    <h3><i class="bi bi-gear"></i> Entwicklungsprozess</h3>
-    <ul>
-      <li><strong>Idee & Konzept</strong> - Welche Probleme soll die App lösen?</li>
-      <li><strong>Design & Benutzeroberfläche</strong> - Wie sieht sie aus und wie fühlt sie sich an?</li>
-      <li><strong>Programmierung</strong> - Umsetzung mit Programmiersprachen und Frameworks</li>
-      <li><strong>Testing & Fehlerbehebung</strong> - Sicherstellen, dass alles stabil läuft</li>
-      <li><strong>Veröffentlichung</strong> - z. B. im App Store oder Google Play Store</li>
-      <li><strong>Wartung & Updates</strong> - Neue Funktionen, Fehlerbehebungen und Optimierungen</li>
-    </ul>
-  </div>
+  <!-- dein content bleibt gleich -->
 </section>
 
 <footer class="bg-dark text-white text-center py-3">
@@ -82,5 +46,23 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="darkmode.js"></script>
+
+
+<script>
+let currentPage = window.location.pathname.split("/").pop();
+
+if (currentPage === "") {
+  currentPage = "AppDevelopment.html";
+}
+
+document.querySelectorAll(".nav-link").forEach(link => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  } else {
+    link.classList.remove("active");
+  }
+});
+</script>
+
 </body>
 </html>
