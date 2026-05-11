@@ -1,0 +1,40 @@
+{
+  "savedPalettes": [
+    {
+      "id": "1",
+      "primary": "#3498db",
+      "secondary": "#2980b9",
+      "accent": "#e74c3c"
+    },
+    {
+      "primary": "#0d6efd",
+      "secondary": "#003bca",
+      "accent": "#f29102",
+      "background": "#f3ffff",
+      "timestamp": "2026-05-07T08:46:38.168Z",
+      "id": "rfMsklmIRVE"
+    },
+    {
+      "primary": "#0d6efd",
+      "secondary": "#003bca",
+      "accent": "#f29102",
+      "background": "#f3ffff",
+      "timestamp": "2026-05-07T08:46:50.130Z",
+      "id": "YY8nyPMqRFc"
+    }
+  ],
+  "tools": [
+    {
+      "id": "1",
+      "name": "Flutter",
+      "category": "Framework"
+    },
+    {
+      "id": "2",
+      "name": "Firebase",
+      "category": "Backend"
+    }
+  ],
+  "feedback": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

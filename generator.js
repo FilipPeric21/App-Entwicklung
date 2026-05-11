@@ -125,3 +125,38 @@ randomColorBtn.addEventListener('click', () => {
     // löst dein bestehendes System aus
     colorPicker.dispatchEvent(new Event('input'));
 });
+
+// Button-Element suchen
+const saveBtn = document.getElementById('save-palette-btn');
+
+// Klick-Event hinzufügen
+saveBtn.addEventListener('click', () => {
+    // Die Daten sammeln, die gespeichert werden sollen
+    const paletteData = {
+        primary: colorPicker.value,
+        secondary: labelSecondary.textContent,
+        accent: labelAccent.textContent,
+        background: labelBg.textContent,
+        timestamp: new Date().toISOString()
+    };
+
+    // Daten an den JSON-Server senden
+    fetch('http://localhost:3000/savedPalettes', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(paletteData)
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Palette erfolgreich in db.json gespeichert!');
+        } else {
+            alert('Fehler beim Speichern. Läuft der JSON-Server?');
+        }
+    })
+    .catch(error => {
+        console.error('Fehler:', error);
+        alert('Server nicht erreichbar. Hast du "npx json-server --watch db.json" gestartet?');
+    });
+});
