@@ -182,3 +182,98 @@ body.dark-mode #random-color-btn {
 body.dark-mode #random-color-btn:hover {
   background-color: #666;
 }
+.predesign-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+}
+
+.predesign-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.predesign-preview {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 60px;
+  margin-bottom: 14px;
+}
+
+.pd-swatch {
+  flex: 1;
+  transition: flex 0.3s ease;
+}
+
+.predesign-card:hover .pd-swatch {
+  flex: 1.2;
+}
+
+.predesign-title {
+  font-weight: 700;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.predesign-codes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.pd-code {
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #444;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.pd-code:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.pd-copy-css,
+.pd-copy-html {
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  flex: 1;
+}
+
+.pd-copy-css:hover,
+.pd-copy-html:hover {
+  background-color: #0b5ed7;
+  transform: scale(1.03);
+  color: #fff;
+}
+
+body.dark-mode .predesign-card {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .pd-code {
+  color: #ccc;
+}
+
+body.dark-mode .predesign-card:hover {
+  box-shadow: 0 12px 30px rgba(255,255,255,0.1);
+}
