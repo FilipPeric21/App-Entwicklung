@@ -159,5 +159,151 @@ saveBtn.addEventListener('click', () => {
         console.error('Fehler:', error);
         alert('Server nicht erreichbar. Hast du "npx json-server --watch db.json" gestartet?');
     });
+    
 });   
+document.querySelectorAll('.pd-copy-css').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
 
+    const card = btn.closest('.predesign-card');
+    if (!card) return;
+
+    const primary = card.dataset.primary;
+    const secondary = card.dataset.secondary;
+    const accent = card.dataset.accent;
+    const bg = card.dataset.bg;
+
+    const css = `:root {
+  --color-primary: ${primary};
+  --color-secondary: ${secondary};
+  --color-accent: ${accent};
+  --color-bg: ${bg};
+}
+
+body {
+  background-color: var(--color-bg);
+  color: #333;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+h1, h2 {
+  color: var(--color-primary);
+}
+
+a {
+  color: var(--color-accent);
+}`;
+
+    copyToClipboard(css);
+  });
+});
+
+document.querySelectorAll('.pd-copy-html').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    const card = btn.closest('.predesign-card');
+    if (!card) return;
+
+    const primary = card.dataset.primary;
+    const secondary = card.dataset.secondary;
+    const accent = card.dataset.accent;
+    const bg = card.dataset.bg;
+
+    const html = `<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Theme Beispiel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: ${bg};
+      color: #333;
+      font-family: Arial, sans-serif;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: ${primary};
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+    }
+
+    p {
+      color: ${secondary};
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .btn-primary {
+      background-color: ${primary};
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-accent {
+      background-color: ${accent};
+      color: white;
+    }
+
+    .btn-accent:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dein Theme</h1>
+    <p>Dies ist ein Beispiel mit deinen ausgewählten Farben. Die Website passt sich an dein Farbschema an.</p>
+
+    <div class="button-group">
+      <button class="btn-primary">Primary Button</button>
+      <button class="btn-accent">Accent Button</button>
+    </div>
+  </div>
+</body>
+</html>`;
+
+    copyToClipboard(html);
+  });
+});
