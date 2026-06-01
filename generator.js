@@ -159,4 +159,5 @@ saveBtn.addEventListener('click', () => {
         console.error('Fehler:', error);
         alert('Server nicht erreichbar. Hast du "npx json-server --watch db.json" gestartet?');
     });
-});
+});   
+
