@@ -307,3 +307,56 @@ document.querySelectorAll('.pd-copy-html').forEach(btn => {
     copyToClipboard(html);
   });
 });
+
+saveBtn.addEventListener('click', async () => {
+    const primaryColor = colorPicker.value.toLowerCase();
+
+    const paletteData = {
+        primary: primaryColor,
+        secondary: labelSecondary.textContent,
+        accent: labelAccent.textContent,
+        background: labelBg.textContent,
+        timestamp: new Date().toISOString()
+    };
+
+    try {
+        const paletteRes = await fetch('http://localhost:3000/savedPalettes', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(paletteData)
+        });
+
+        if (!paletteRes.ok) {
+            alert('Fehler beim Speichern. Läuft der JSON-Server?');
+            return;
+        }
+
+        const statsRes = await fetch(`http://localhost:3000/colorStats?primary=${encodeURIComponent(primaryColor)}`);
+        const existing = await statsRes.json();
+
+        if (existing.length > 0) {
+            const entry = existing[0];
+            await fetch(`http://localhost:3000/colorStats/${entry.id}`, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ count: entry.count + 1, lastUsed: new Date().toISOString() })
+            });
+        } else {
+            await fetch('http://localhost:3000/colorStats', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    primary: primaryColor,
+                    count: 1,
+                    lastUsed: new Date().toISOString()
+                })
+            });
+        }
+
+        alert('Palette erfolgreich in db.json gespeichert!');
+
+    } catch (error) {
+        console.error('Fehler:', error);
+        alert('Server nicht erreichbar. Hast du "npx json-server --watch db.json" gestartet?');
+    }
+});
