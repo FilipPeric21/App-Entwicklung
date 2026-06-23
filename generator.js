@@ -331,12 +331,20 @@ saveBtn.addEventListener('click', async () => {
             return;
         }
 
+<<<<<<< HEAD
         const statsRes = await fetch(`http://localhost:3000/colorStats?primary=${encodeURIComponent(primaryColor)}`);
+=======
+        const statsRes = await fetch(http://localhost:3000/colorStats?primary=${encodeURIComponent(primaryColor)});
+>>>>>>> 4ac0010e709bd4bdda92aee014dcfe0ed543983c
         const existing = await statsRes.json();
 
         if (existing.length > 0) {
             const entry = existing[0];
+<<<<<<< HEAD
             await fetch(`http://localhost:3000/colorStats/${entry.id}`, {
+=======
+            await fetch(http://localhost:3000/colorStats/${entry.id}, {
+>>>>>>> 4ac0010e709bd4bdda92aee014dcfe0ed543983c
                 method: 'PATCH',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ count: entry.count + 1, lastUsed: new Date().toISOString() })
